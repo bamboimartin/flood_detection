@@ -1,0 +1,64 @@
+
+
+in_channels : 3
+num_classes : 2
+
+
+
+
+model_name : unet
+batch_size : 6
+epochs : 2000
+learning_rate : !!float 3e-4
+val_plot_epoch : 2
+augment : True
+transfer_lr : False
+gpu : !!str 2
+
+
+
+
+
+experiment : patchify
+
+
+
+patchify : True
+patch_class_balance : False 
+patch_size : 256 
+stride : 64
+p_train_dir : json/train_patch_256.json
+p_valid_dir : json/valid_patch_256.json
+p_test_dir : json/test_patch_256.json
+
+
+
+weights : False 
+balance_weights : [1.4, 8.6] 
+
+dataset_dir : /home/projects/martin_wd/data/
+root_dir : /home/projects/martin_wd/
+train_size : 0.8
+train_dir : train.csv
+valid_dir : valid.csv
+test_dir : test.csv
+
+
+
+csv : True
+val_pred_plot : True
+lr : True
+tensorboard : True
+early_stop : True
+checkpoint : True
+patience : 300 
+
+
+
+load_model_name : unet_ex_cls_balance_epochs_2000_14-Mar-22.hdf5
+load_model_dir : model/unet
+
+
+
+plot_single : True 
+index : -1 
