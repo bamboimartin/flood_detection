@@ -1,7 +1,12 @@
 
 ## **Activate the environment and right path**
+```
 conda activate gpu
+```
+
+```
 cd /home/projects/martin_wd/project
+```
 
 ### **Training**
 ```
